@@ -11,37 +11,56 @@ public class BaiTapUngDungDocSoThanhChu {
         String numberOfUnits = scanner.nextLine();
         String number = numberOfHundreds + numberOfTens + numberOfUnits;
         int inumber = Integer.parseInt(number);
+        int inumOfUni = Integer.parseInt(numberOfUnits);
+        int inumOfTens = Integer.parseInt(numberOfTens);
 
         if (0 <= inumber && inumber <10){
             String result = readNumberOfUnits(numberOfUnits);
             System.out.println(result);
         } else if (10 <= inumber && inumber < 20) {
             String result = readNumberOfTens(numberOfUnits);
-        } else if (inumber == 20) {
-            System.out.println("Twenty");
-        } else if (20 < inumber && inumber < 100) {
-            String resultNumOfTens = readNumberOfTensPlus(numberOfTens);
-            String resultNumOfUnit = readNumberOfUnits(numberOfUnits);
-            System.out.println(resultNumOfTens + resultNumOfUnit);
-        } else if ( inumber == 100) {
-            System.out.println("One hundred");
-        } else if (100 < inumber && inumber <1000) {
-            String resultNumOfHund = readNumberOfHundreds(numberOfHundreds);
-            String numberSum = numberOfTens + numberOfUnits;
-            int inumberSum = Integer.parseInt(numberSum);
-            String resultTens = "";
-            if (10 <= inumberSum && inumberSum < 20){
-                 resultTens = readNumberOfTens(numberOfUnits);
-            } else if (inumberSum == 20) {
-                resultTens = "Twenty";
-            } else if (20 < inumberSum && inumberSum < 100) {
+
+        } else if (20 <= inumber && inumber < 100) {
+            if (inumOfUni == 0){
+                String resultNumOfTens = readNumberOfTensPlus(numberOfTens);
+                System.out.println(resultNumOfTens);
+            }else {
                 String resultNumOfTens = readNumberOfTensPlus(numberOfTens);
                 String resultNumOfUnit = readNumberOfUnits(numberOfUnits);
-                resultTens = resultNumOfTens + resultNumOfUnit;
-
+                System.out.println(resultNumOfTens + resultNumOfUnit);
             }
-            System.out.println(resultNumOfHund + " and " + resultTens);
 
+        } else if (100 <= inumber && inumber <1000) {
+            if(inumOfTens == 0 && inumOfUni == 0){
+                String resultNumOfHund = readNumberOfHundreds(numberOfHundreds);
+                System.out.println(resultNumOfHund);
+            }else {
+                String resultNumOfHund = readNumberOfHundreds(numberOfHundreds);
+                String numberSum = numberOfTens + numberOfUnits;
+                int inumberSum = Integer.parseInt(numberSum);
+                String resultTens = "";
+                if (0 <= inumberSum && inumberSum <10){
+                    resultTens = readNumberOfUnits(numberOfUnits);
+                }
+                else if (10 <= inumberSum && inumberSum < 20) {
+                    resultTens = readNumberOfTens(numberOfUnits);
+
+                } else if (20 <= inumberSum && inumberSum < 100) {
+                    if (inumOfUni == 0){
+                        resultTens = readNumberOfTensPlus(numberOfTens);
+
+                    }else {
+                        String resultNumOfTens = readNumberOfTensPlus(numberOfTens);
+                        String resultNumOfUnit = readNumberOfUnits(numberOfUnits);
+                        resultTens = resultNumOfTens + resultNumOfUnit;
+                    }
+
+                }
+                System.out.println(resultNumOfHund + " and " + resultTens);
+            }
+
+        }else {
+            System.out.println("Out of ability");
         }
 
 
