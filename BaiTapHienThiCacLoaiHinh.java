@@ -68,8 +68,8 @@ public class BaiTapHienThiCacLoaiHinh {
                 break;
             case 3:
                 System.out.println("Draw isosceles triangle");
-                for ( int i = 1 ; i <=7; i++){
-                    for ( int j = 7; j >= i; j--){
+                for ( int i = 1 ; i <=4; i++){
+                    for ( int j = 4; j >= i; j--){
                         System.out.print(" ");
                         if ( j == i){
                             for ( int k = 0; k < j; k++){
@@ -77,7 +77,7 @@ public class BaiTapHienThiCacLoaiHinh {
                             }
                         }
                     }
-                    System.out.println("\n");
+                    System.out.println();
                 }
                 break;
             case 4:
