@@ -15,7 +15,7 @@ public class BaiTapTimGiaTriTrongMang {
         if ( i == -1){
             System.out.println("Tên bạn nhập không có trong danh sách!");
         }else
-            System.out.println("Tên bạn nhập ở vị trí thứ " + (i+1) + " trong danh sách");
+            System.out.println("Tên bạn nhập ở vị trí thứ " + (i+1) +  " trong danh sách");
 
     }
 }
