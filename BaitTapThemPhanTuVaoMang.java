@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class BaitTapThemPhanTuVaoMang {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int [] Mang1 = {4,2,8,9,14,0,0,0,0,0};
+        int [] Mang1 = {4,2,8,9,14,25,0,0,0,0,0};
         System.out.println("Nhập số cần chèn:");
         int number = sc.nextInt();
         System.out.println("Nhập vị trí cần chèn:");
