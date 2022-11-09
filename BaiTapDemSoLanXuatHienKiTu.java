@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class BaiTapDemSoLanXuatHienKiTu {
@@ -17,4 +18,5 @@ public class BaiTapDemSoLanXuatHienKiTu {
         System.out.println("Số lần xuất hiện của kí tự trong chuỗi là: " + count);
 
     }
+
 }

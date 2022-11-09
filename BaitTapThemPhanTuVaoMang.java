@@ -11,10 +11,10 @@ public class BaitTapThemPhanTuVaoMang {
             System.out.println("Vị trí bạn nhập không đúng! Vui lòng nhập lại : ");
              adress = sc.nextInt();
         }
-           for ( int j =Mang1.length-1; j >= adress ; j--){
+           for ( int j =Mang1.length-1; j > adress ; j--){
                Mang1[j] = Mang1[j - 1 ];
            }
-           Mang1[adress] = number;
+//           Mang1[adress] = number;
         for (int x: Mang1
              ) {
             System.out.print(x + " ");
