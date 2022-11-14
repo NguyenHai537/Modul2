@@ -8,7 +8,7 @@ public class TestComparable {
         ComparableCircle[] circles = new ComparableCircle[3];
         circles[0] = new ComparableCircle(3.6);
         circles[1] = new ComparableCircle();
-        circles[2] = new ComparableCircle(3.6, "indigo");
+        circles[2] = new ComparableCircle(3.5, "indigo");
 
         System.out.println("Pre-sorted:");
         for (ComparableCircle circle : circles) {
