@@ -42,7 +42,6 @@ public class NextDayCalculator {
         }
         return day +"/" + month + "/" +year;
     }
-
     private static boolean isLeapYear(int year){
         boolean isDivisibleBy4 = year % 4 == 0;
         if(isDivisibleBy4){
