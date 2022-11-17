@@ -7,20 +7,17 @@ public class FizzBuzz {
         if (number >0 && number <100){
             boolean isDivision3 = number % 3 == 0;
             boolean isDivision5 = number % 5 == 0;
-            if (isDivision3 || isNumberhas3(number)) {
+            if (isDivision3 || isNumberhas3(number)){
                 if (isDivision5) {
                     result = "FizzBuzz";
                 } else
                     result = "Fizz";
-            } else if (isDivision5 || isNumberhas5(number)) {
+            } else if (isDivision5 || isNumberhas5(number)){
                 result = "Buzz";
-
             } else
                 result = readNumber(number);
-
+        }
         return result;
-        }else
-            return result;
     }
     public static boolean isNumberhas3(int number) {
         int numberLeft = number / 10;
