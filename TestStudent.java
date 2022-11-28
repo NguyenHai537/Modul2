@@ -1,8 +1,14 @@
+import java.util.Stack;
+
 public class TestStudent {
     public static void main(String[] args) {
-        Student st1 = new Student();
-        st1.setName("Hoa");
-        st1.setClasses("C01");
-        System.out.println(st1.getName() + " "+ st1.getClasses());
+        Stack<Integer> stackOne = new Stack<Integer>();
+        Stack<Integer> stackTwo = new Stack<Integer>();
+        for (int i = 0; i < 5; i++)
+            stackOne.push(i);
+        stackTwo.push(stackOne.pop());
+        stackTwo.push(stackOne.pop());
+        stackTwo.push(stackOne.pop());
+        System.out.println(stackOne.peek() + stackTwo.peek());
     }
 }
